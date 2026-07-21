@@ -132,9 +132,15 @@
         });
       }catch(e){}
     }
-    document.querySelector(".yes").addEventListener("click",async()=>{await sendRating("Yes");showPage('yesPage');});
-    document.querySelector(".no").addEventListener("click",async()=>{await sendRating("No");showPage('noPage');});
+   document.querySelector(".yes").addEventListener("click", () => {
+    showPage("yesPage");
+    sendRating("Yes");
+});
 
+document.querySelector(".no").addEventListener("click", () => {
+    showPage("noPage");
+    sendRating("No");
+}); 
 </script>
 </body>
 </html>
